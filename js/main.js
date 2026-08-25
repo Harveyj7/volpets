@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navPlaceholder = document.getElementById("nav-placeholder");
   const heroContent = document.querySelector("[data-lazy-reveal]");
+  const contactForm = document.getElementById("contact-form");
 
   if (heroContent) {
     window.setTimeout(() => {
@@ -43,5 +44,70 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       })
       .catch((error) => console.error("Error loading navbar:", error));
+  }
+
+  if (contactForm) {
+    const emailJsConfig = {
+      publicKey: "QkQOLzSvp2UUeodIy",
+      serviceId: "service_i4yj1re",
+      templateId: "template_mtqd8kn",
+    };
+    const submitBtn = document.getElementById("submit-btn");
+    const formStatus = document.getElementById("contact-form-status");
+    const honeypot = document.getElementById("contact-website");
+    const defaultButtonText = submitBtn.textContent;
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (honeypot.value.trim()) {
+        contactForm.reset();
+        formStatus.textContent = "";
+        formStatus.className = "contact-form__status";
+        return;
+      }
+
+      const isConfigured = Object.values(emailJsConfig).every(
+        (value) => value && !value.startsWith("YOUR_"),
+      );
+
+      if (!isConfigured) {
+        formStatus.textContent = "The contact form is not configured yet. Please try again later.";
+        formStatus.className = "contact-form__status contact-form__status--error";
+        return;
+      }
+
+      if (!window.emailjs) {
+        formStatus.textContent = "The contact service could not load. Please try again later.";
+        formStatus.className = "contact-form__status contact-form__status--error";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+      contactForm.setAttribute("aria-busy", "true");
+      formStatus.textContent = "";
+      formStatus.className = "contact-form__status";
+
+      try {
+        await window.emailjs.sendForm(
+          emailJsConfig.serviceId,
+          emailJsConfig.templateId,
+          contactForm,
+          { publicKey: emailJsConfig.publicKey },
+        );
+        contactForm.reset();
+        formStatus.textContent = "Thanks — your message has been sent.";
+        formStatus.className = "contact-form__status contact-form__status--success";
+      } catch (error) {
+        console.error("EmailJS send failed:", error);
+        formStatus.textContent = "Sorry, your message could not be sent. Please try again.";
+        formStatus.className = "contact-form__status contact-form__status--error";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = defaultButtonText;
+        contactForm.removeAttribute("aria-busy");
+      }
+    });
   }
 });
