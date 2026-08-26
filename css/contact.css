@@ -97,3 +97,13 @@
 .contact-form__status--error {
   color: #ffb4ab;
 }
+
+@media (max-width: 500px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form__field:nth-of-type(3) {
+    grid-column: auto;
+  }
+}
