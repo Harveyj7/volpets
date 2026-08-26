@@ -1,0 +1,109 @@
+.gallery-grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-auto-rows: clamp(150px, 15vw, 210px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.5vw, 20px);
+}
+
+.gallery-grid .image-container {
+  min-height: 0;
+}
+
+.gallery-grid .gallery-wide {
+  grid-column: span 2;
+}
+
+.gallery-grid .gallery-tall,
+.gallery-grid > .card {
+  grid-row: span 2;
+}
+
+.gallery-grid > .card {
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-grid > .card::before {
+  background: var(--accent);
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.gallery-grid > .card h2 {
+  font-size: clamp(25px, 2.3vw, 34px);
+  letter-spacing: -0.6px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.gallery-grid > .card p:last-child {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: var(--leading-copy);
+}
+
+.gallery-grid .gallery-logo {
+  background: var(--surface);
+}
+
+.gallery-grid .gallery-logo img {
+  object-fit: contain;
+  padding: clamp(22px, 4vw, 54px);
+}
+
+.gallery-grid .gallery-logo-mark img {
+  padding: clamp(30px, 5vw, 68px);
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-auto-rows: clamp(145px, 21vw, 190px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .gallery-grid {
+    grid-auto-rows: clamp(145px, 40vw, 210px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid > .card {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .gallery-grid {
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid .image-container,
+  .gallery-grid .gallery-wide,
+  .gallery-grid .gallery-tall,
+  .gallery-grid > .card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .gallery-grid .image-container {
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-grid .gallery-tall {
+    aspect-ratio: 3 / 4;
+  }
+
+  .gallery-grid > .card {
+    min-height: 260px;
+  }
+}

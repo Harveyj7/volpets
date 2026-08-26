@@ -6,9 +6,9 @@
     <meta name="description" content="Read Volpets reviews and explore our awards and recognition.">
     <title>Volpets | Reviews &amp; Awards</title>
     <link rel="stylesheet" href="css/styles.css">
-<!--    <link rel="stylesheet" href="css/index.css">-->
     <link rel="stylesheet" href="components/navbar.css">
     <script src="js/main.js" defer></script>
+    <script src="js/review-carousel.js" defer></script>
   </head>
   <body>
     <main>
@@ -16,12 +16,45 @@
         <div id="nav-placeholder"></div>
       </header>
 
-      <section class="hero-content hero-content--pending" data-lazy-reveal>
-<!--        <p class="subtitle">Trusted care &middot; Lasting relationships &middot; Recognition</p>-->
-<!--        <h1 class="headline">Recommended by people who know us.</h1>-->
-<!--        <p class="description">-->
-<!--          Discover what our members say about Volpets and the recognition our approach to care has received.-->
-<!--        </p>-->
+      <section class="page-section" data-lazy-reveal>
+        <div class="container">
+          <p class="header-tag">REPUTATION</p>
+          <h1 class="headline">Reviews & Awards</h1>
+          <p class="subtitle">Trust is earned quietly - through consistency, care and the confidence owners feel every day.</p>
+
+          <review-carousel aria-label="Client reviews">
+            <review-card rating="5" review-title="Wonderful care from day one" client-name="Sarah &amp; Milo" client-area="Fulham">
+              The team made Milo feel settled straight away. I get thoughtful updates after every visit and always come home to a very happy dog.
+            </review-card>
+            <review-card rating="5" review-title="Completely dependable" client-name="James &amp; Poppy" client-area="Chelsea">
+              Volpets has been reliable, kind and flexible whenever our plans change. Poppy absolutely lights up when her walker arrives.
+            </review-card>
+            <review-card rating="5" review-title="A real home from home" client-name="Priya &amp; Luna" client-area="Kensington">
+              Luna is usually nervous around new people, but she quickly relaxed with the team. The care and attention are genuinely exceptional.
+            </review-card>
+            <review-card rating="5" review-title="Above and beyond" client-name="Tom &amp; Archie" client-area="Putney">
+              Archie receives so much more than a walk. He gets patient, individual care and comes back calm, content and ready for a nap.
+            </review-card>
+            <review-card rating="5" review-title="The best decision we made" client-name="Emma &amp; Ted" client-area="Richmond">
+              Having Volpets look after Ted has made busy weeks effortless. Communication is excellent and we trust the team completely.
+            </review-card>
+            <review-card rating="5" review-title="Kind, calm and professional" client-name="Daniel &amp; Olive" client-area="Wandsworth">
+              Olive can be particular about who she trusts, but the gentle approach won her over. Every detail of her routine is remembered.
+            </review-card>
+            <review-card rating="5" review-title="Our dog adores them" client-name="Rebecca &amp; Finn" client-area="Barnes">
+              Finn waits by the door on walking days. The photos and updates are a lovely touch, and the service has always been faultless.
+            </review-card>
+            <review-card rating="5" review-title="Genuine peace of mind" client-name="Alex &amp; Daisy" client-area="Clapham">
+              Knowing Daisy is in such capable hands gives us complete peace of mind. The team is responsive, caring and consistently brilliant.
+            </review-card>
+            <review-card rating="5" review-title="Flexible and thoughtful" client-name="Hannah &amp; Otis" client-area="Battersea">
+              They understand Otis and adapt each visit to what he needs that day. It feels like asking a trusted friend to care for him.
+            </review-card>
+            <review-card rating="5" review-title="Five-star service" client-name="Michael &amp; Ruby" client-area="Chiswick">
+              From the first meeting, everything felt organised and personal. Ruby is cared for beautifully and we could not recommend Volpets more.
+            </review-card>
+          </review-carousel>
+        </div>
       </section>
     </main>
   </body>
