@@ -16,61 +16,55 @@
     <div id="nav-placeholder"></div>
   </header>
 
-  <section class="page-section services-hero">
-    <div class="container services-hero__layout">
-      <div class="services-hero__content">
+  <section aria-labelledby="services-hero-title" class="page-section split-hero services-hero">
+    <div class="container split-hero__layout">
+      <div class="split-hero__content">
         <div class="header-tag">The Volpets Standard</div>
-        <h1>More than a walk.</h1>
-        <h1 class="gold-header">A complete standard of care</h1>
-        <p class="services-hero__intro">A structured daily programme combining exercise, training, enrichment and
+        <h1 id="services-hero-title">More than a walk.<br><span class="gold-header">A complete standard of care</span></h1>
+        <p class="subtitle">A structured daily programme combining exercise, training, enrichment and
           exceptional care &mdash; designed around your dog.</p>
 
-        <div aria-label="Service benefits" class="service-benefits">
-          <div class="service-benefit">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="8.5"></circle>
-              <path d="M12 7v5l3 2"></path>
+        <div aria-label="Service benefits" class="split-hero__highlights">
+          <div class="split-hero__highlight">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-clock"></use>
             </svg>
             <span>90-minute park time</span>
           </div>
-          <div class="service-benefit">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 20.5S4 16 4 9.5A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8 2.8c0 6.5-8 11-8 11Z"></path>
+          <div class="split-hero__highlight">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-heart"></use>
             </svg>
             <span>Max. 4 dogs per walk</span>
           </div>
-          <div class="service-benefit">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 21s6-5.3 6-11a6 6 0 1 0-12 0c0 5.7 6 11 6 11Z"></path>
-              <circle cx="12" cy="10" r="2"></circle>
+          <div class="split-hero__highlight">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-pin"></use>
             </svg>
             <span>GPS tracked walks & vans</span>
           </div>
         </div>
       </div>
-
+    </div>
+    <div class="split-hero__visual">
+      <img alt="Dog enjoying the water during a Volpets outing" fetchpriority="high" src="assets/services-0890.JPG">
     </div>
   </section>
-
-  <div class="services-hero__visual">
-    <img alt="Dog enjoying the water during a Volpets outing" src="assets/services-0890.JPG">
-  </div>
 
   <section class="page-section services-showcase">
     <div class="container">
       <div class="header-tag">Our services</div>
       <h2>Everything your dog needs considered in every detail.</h2>
-      <p class="services-hero__intro">From daily adventures to specialist care, our range of services is designed to
+      <p class="subtitle">From daily adventures to specialist care, our range of services is designed to
         support your dog's physical
         health, behaviour and overall wellbeing.</p>
 
       <div class="services-showcase__grid">
         <article class="service-card">
           <img alt="Dogs enjoying time outdoors with Volpets" loading="lazy" src="assets/IMG_0269.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="8.5"></circle>
-              <path d="M12 7v5l3 2"></path>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-clock"></use>
             </svg>
             <span>Time to explore, play and unwind</span>
           </div>
@@ -78,9 +72,9 @@
 
         <article class="service-card">
           <img alt="A Volpets dog enjoying a day outside" loading="lazy" src="assets/IMG_0285.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 20.5S4 16 4 9.5A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8 2.8c0 6.5-8 11-8 11Z"></path>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-heart"></use>
             </svg>
             <span>Thoughtful care for every personality</span>
           </div>
@@ -91,10 +85,9 @@
 
         <article class="service-card">
           <img alt="A happy dog on a Volpets adventure" loading="lazy" src="assets/IMG_0307.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 21s6-5.3 6-11a6 6 0 1 0-12 0c0 5.7 6 11 6 11Z"></path>
-              <circle cx="12" cy="10" r="2"></circle>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-pin"></use>
             </svg>
             <span>Adventures tracked from start to finish</span>
           </div>
@@ -102,10 +95,9 @@
 
         <article class="service-card">
           <img alt="A dog relaxing during outdoor enrichment" loading="lazy" src="assets/IMG_0345.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="8.5"></circle>
-              <path d="M12 7v5l3 2"></path>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-clock"></use>
             </svg>
             <span>Unhurried walks with genuine park time</span>
           </div>
@@ -113,9 +105,9 @@
 
         <article class="service-card">
           <img alt="A Volpets dog enjoying structured play" loading="lazy" src="assets/IMG_1256.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 20.5S4 16 4 9.5A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8 2.8c0 6.5-8 11-8 11Z"></path>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-heart"></use>
             </svg>
             <span>Positive play in carefully matched packs</span>
           </div>
@@ -123,10 +115,9 @@
 
         <article class="service-card">
           <img alt="A dog exploring nature with Volpets" loading="lazy" src="assets/IMG_2953.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 21s6-5.3 6-11a6 6 0 1 0-12 0c0 5.7 6 11 6 11Z"></path>
-              <circle cx="12" cy="10" r="2"></circle>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-pin"></use>
             </svg>
             <span>Safe routes chosen with care</span>
           </div>
@@ -134,10 +125,9 @@
 
         <article class="service-card">
           <img alt="A dog receiving attentive outdoor care" loading="lazy" src="assets/IMG_4454.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="8.5"></circle>
-              <path d="M12 7v5l3 2"></path>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-clock"></use>
             </svg>
             <span>Reliable routines, every weekday</span>
           </div>
@@ -145,9 +135,9 @@
 
         <article class="service-card">
           <img alt="A content dog spending time with Volpets" loading="lazy" src="assets/IMG_7699.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 20.5S4 16 4 9.5A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8 2.8c0 6.5-8 11-8 11Z"></path>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-heart"></use>
             </svg>
             <span>Confidence built through kind guidance</span>
           </div>
@@ -155,10 +145,9 @@
 
         <article class="service-card">
           <img alt="A dog enjoying an enriching Volpets outing" loading="lazy" src="assets/IMG_9292.JPG">
-          <div class="service-benefit service-card__detail">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M12 21s6-5.3 6-11a6 6 0 1 0-12 0c0 5.7 6 11 6 11Z"></path>
-              <circle cx="12" cy="10" r="2"></circle>
+          <div class="service-card__detail">
+            <svg aria-hidden="true" class="line-icon line-icon--small">
+              <use href="assets/icons.svg#icon-pin"></use>
             </svg>
             <span>Local adventures with familiar handlers</span>
           </div>
@@ -175,48 +164,40 @@
       </div>
 
       <article class="standard-item">
-        <svg aria-hidden="true" viewBox="0 0 48 48">
-          <path d="M24 4 39 10v12c0 10-6.4 17.1-15 22-8.6-4.9-15-12-15-22V10L24 4Z"></path>
-          <path d="m17 23 5 5 10-11"></path>
+        <svg aria-hidden="true" class="line-icon">
+          <use href="assets/icons.svg#icon-shield-check"></use>
         </svg>
         <h3>DBS checked team</h3>
         <p>Every member of our team is fully vetted for your peace of mind.</p>
       </article>
 
       <article class="standard-item">
-        <svg aria-hidden="true" viewBox="0 0 48 48">
-          <path d="m5 17 19-10 19 10-19 10L5 17Z"></path>
-          <path d="M13 22v11c7 5 15 6 22 0V22"></path>
-          <path d="M43 17v14"></path>
+        <svg aria-hidden="true" class="line-icon">
+          <use href="assets/icons.svg#icon-training"></use>
         </svg>
         <h3>Trained in-house</h3>
         <p>Continuous training in behaviour, first aid and pack handling.</p>
       </article>
 
       <article class="standard-item">
-        <svg aria-hidden="true" viewBox="0 0 48 48">
-          <path d="M24 44S38 31.6 38 18A14 14 0 1 0 10 18c0 13.6 14 26 14 26Z"></path>
-          <circle cx="24" cy="18" r="5"></circle>
+        <svg aria-hidden="true" class="line-icon">
+          <use href="assets/icons.svg#icon-pin"></use>
         </svg>
         <h3>GPS tracked everywhere</h3>
         <p>Walks and vans are tracked in real time for complete visibility.</p>
       </article>
 
       <article class="standard-item">
-        <svg aria-hidden="true" viewBox="0 0 48 48">
-          <circle cx="14" cy="13" r="5"></circle>
-          <circle cx="32" cy="13" r="5"></circle>
-          <path d="M6 35c0-9 3-15 8-15s8 6 8 15M24 35c0-9 3-15 8-15s8 6 8 15"></path>
-          <path d="M18 42c0-6 4-10 8-10s8 4 8 10"></path>
+        <svg aria-hidden="true" class="line-icon">
+          <use href="assets/icons.svg#icon-pack"></use>
         </svg>
         <h3>Carefully matched packs</h3>
         <p>Every dog is assessed to ensure a harmonious group dynamic.</p>
       </article>
 
       <article class="standard-item">
-        <svg aria-hidden="true" viewBox="0 0 48 48">
-          <path d="M3 24s8-13 21-13 21 13 21 13-8 13-21 13S3 24 3 24Z"></path>
-          <circle cx="24" cy="24" r="6"></circle>
+        <svg aria-hidden="true" class="line-icon">
+          <use href="assets/icons.svg#icon-focus"></use>
         </svg>
         <h3>Focused handling</h3>
         <p>Our team stays fully focused on the dogs in their care.</p>
@@ -224,25 +205,30 @@
     </div>
   </section>
 
-  <section aria-labelledby="club-title" class="club-cta">
-    <div class="club-cta__image">
-      <img alt="Happy dog enjoying a Volpets park outing" loading="lazy" src="assets/contact_6156.JPG">
-    </div>
-
-    <div class="club-cta__copy">
-      <div class="header-tag">Welcome to Volpets</div>
-      <h2 id="club-title">A better day for your dog.</h2>
-      <h2>Complete peace of mind for you.</h2>
-      <p>Every service we offer is delivered with the same promise: professional care, genuine affection and total
-        accountability.</p>
-    </div>
-
-    <div class="club-cta__action">
-      <a class="club-cta__button" href="contact.html">Join the club</a>
-      <p>Speak to our team to learn more<br>or check availability in your area.</p>
+  <section aria-labelledby="services-membership-title" class="page-section member-cta-section">
+    <div class="container">
+      <div class="member-cta">
+        <img alt="Happy dog enjoying a Volpets park outing" class="member-cta__image" loading="lazy"
+             src="assets/contact_6156.JPG">
+        <div class="member-cta__copy">
+          <div class="header-tag">Welcome to Volpets</div>
+          <h2 class="member-cta__title" id="services-membership-title">A better day for your dog.<br>Complete peace
+            of mind for you.</h2>
+          <p>Every service we offer is delivered with the same promise: professional care, genuine affection and total
+            accountability.</p>
+        </div>
+        <a class="member-cta__button" href="contact.html">Join the club</a>
+      </div>
     </div>
   </section>
 
+  <footer>
+    <ul>
+      <li>Private dog club</li>
+      <li>London</li>
+      <li>Membership enquiries Via contact page</li>
+    </ul>
+  </footer>
 </main>
 </body>
 </html>

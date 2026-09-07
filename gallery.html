@@ -15,11 +15,11 @@
   <header>
     <div id="nav-placeholder"></div>
   </header>
-  <section class="page-section">
+  <section aria-labelledby="service-title" class="page-section">
     <div class="container">
-      <p class="header-tag">Gallery</p>
-      <h1 class="headline">Life inside the club.</h1>
-      <p class="subtitle">Real dogs. Real parks. Calm, structured days with space to explore.</p>
+      <p class="header-tag">Inside Volpets</p>
+      <h1 id="service-title">Real Dogs. <span class="gold-header">Real days.</span></h1>
+      <p class="subtitle">A glimpse of the walks, training and relationships that make the club what it is.</p>
 
       <div class="gallery-grid">
         <div class="image-container gallery-wide">
@@ -27,10 +27,6 @@
         </div>
         <div class="image-container gallery-tall">
           <img alt="A dog enjoying time outdoors with VolPets" decoding="async" src="assets/IMG_0285.JPG">
-        </div>
-        <div class="card">
-          <h2>The VolPets way</h2>
-          <p>Small, consistent packs. Beautiful open spaces. Thoughtful handling. A routine dogs can trust.</p>
         </div>
         <div class="image-container gallery-tall">
           <img alt="A dog on a calm VolPets walk" decoding="async" loading="lazy" src="assets/IMG_0288.JPG">
@@ -132,20 +128,23 @@
         <!--        <div class="image-container gallery-logo">-->
         <!--          <img alt="VolPets" decoding="async" loading="lazy" src="assets/logo-text.png">-->
         <!--        </div>-->
-        <div class="image-container gallery-wide">
-          <img alt="Dogs walking together in open countryside" decoding="async" loading="lazy"
-               src="assets/services-0890.JPG">
-        </div>
-        <div class="image-container gallery-tall">
-          <img alt="A dog enjoying a countryside outing" decoding="async" loading="lazy"
-               src="assets/services2_0852.JPG">
-        </div>
-        <div class="image-container">
-          <img alt="A small dog in the VolPets community" decoding="async" loading="lazy"
-               src="assets/smalldog_0b3a0555.JPG">
-        </div>
-        <div class="image-container">
-          <img alt="Two dogs spending time together" decoding="async" loading="lazy" src="assets/twodogs_cdc1fa4b.JPG">
+        <div class="gallery-final-row">
+          <div class="image-container">
+            <img alt="Dogs walking together in open countryside" decoding="async" loading="lazy"
+                 src="assets/services-0890.JPG">
+          </div>
+          <div class="image-container">
+            <img alt="A dog enjoying a countryside outing" decoding="async" loading="lazy"
+                 src="assets/services2_0852.JPG">
+          </div>
+          <div class="image-container">
+            <img alt="A small dog in the VolPets community" decoding="async" loading="lazy"
+                 src="assets/smalldog_0b3a0555.JPG">
+          </div>
+          <div class="image-container">
+            <img alt="Two dogs spending time together" decoding="async" loading="lazy"
+                 src="assets/twodogs_cdc1fa4b.JPG">
+          </div>
         </div>
         <!--        <div class="image-container gallery-logo gallery-logo-mark">-->
         <!--          <img alt="VolPets logo" decoding="async" loading="lazy" src="">-->
@@ -153,6 +152,29 @@
       </div>
     </div>
   </section>
+
+  <section aria-labelledby="gallery-membership-title" class="page-section member-cta-section">
+    <div class="container">
+      <div class="member-cta">
+        <img alt="A Volpets dog in the warm evening light" class="member-cta__image" loading="lazy"
+             src="assets/IMG_7294.JPG">
+        <div class="member-cta__copy">
+          <div class="header-tag">Become a member</div>
+          <h2 class="member-cta__title" id="gallery-membership-title">For dogs who are<br>part of the family.</h2>
+          <p>Speak to our team to learn more or check membership availability in your area.</p>
+        </div>
+        <a class="member-cta__button" href="contact.html">Apply to join</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <ul>
+      <li>Private dog club</li>
+      <li>London</li>
+      <li>Membership enquiries Via contact page</li>
+    </ul>
+  </footer>
 </main>
 </body>
 </html>

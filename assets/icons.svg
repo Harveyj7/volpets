@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5"/>
+    <path d="M12 7v5l3 2"/>
+  </symbol>
+
+  <symbol id="icon-heart" viewBox="0 0 24 24">
+    <path d="M12 20.5S4 16 4 9.5A4.5 4.5 0 0 1 12 6.7a4.5 4.5 0 0 1 8 2.8c0 6.5-8 11-8 11Z"/>
+  </symbol>
+
+  <symbol id="icon-pin" viewBox="0 0 24 24">
+    <path d="M12 21s6-5.3 6-11a6 6 0 1 0-12 0c0 5.7 6 11 6 11Z"/>
+    <circle cx="12" cy="10" r="2"/>
+  </symbol>
+
+  <symbol id="icon-shield-check" viewBox="0 0 48 48">
+    <path d="M24 4 39 10v12c0 10-6.4 17.1-15 22-8.6-4.9-15-12-15-22V10L24 4Z"/>
+    <path d="m17 23 5 5 10-11"/>
+  </symbol>
+
+  <symbol id="icon-training" viewBox="0 0 48 48">
+    <path d="m5 17 19-10 19 10-19 10L5 17Z"/>
+    <path d="M13 22v11c7 5 15 6 22 0V22"/>
+    <path d="M43 17v14"/>
+  </symbol>
+
+  <symbol id="icon-pack" viewBox="0 0 48 48">
+    <circle cx="14" cy="13" r="5"/>
+    <circle cx="32" cy="13" r="5"/>
+    <path d="M6 35c0-9 3-15 8-15s8 6 8 15M24 35c0-9 3-15 8-15s8 6 8 15"/>
+    <path d="M18 42c0-6 4-10 8-10s8 4 8 10"/>
+  </symbol>
+
+  <symbol id="icon-focus" viewBox="0 0 48 48">
+    <path d="M3 24s8-13 21-13 21 13 21 13-8 13-21 13S3 24 3 24Z"/>
+    <circle cx="24" cy="24" r="6"/>
+  </symbol>
+</svg>

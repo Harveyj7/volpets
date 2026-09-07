@@ -1,9 +1,11 @@
 .gallery-grid {
+  --gallery-gap: clamp(12px, 1.5vw, 20px);
+
   display: grid;
+  gap: var(--gallery-gap);
   grid-auto-flow: dense;
   grid-auto-rows: clamp(150px, 15vw, 210px);
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(12px, 1.5vw, 20px);
 }
 
 .gallery-grid .image-container {
@@ -17,6 +19,15 @@
 .gallery-grid .gallery-tall,
 .gallery-grid > .card {
   grid-row: span 2;
+}
+
+.gallery-final-row {
+  display: grid;
+  gap: var(--gallery-gap);
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr);
+  min-height: 0;
 }
 
 .gallery-grid > .card {
@@ -78,6 +89,12 @@
     grid-column: span 2;
     grid-row: span 1;
   }
+
+  .gallery-final-row {
+    grid-row: span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 420px) {
@@ -93,6 +110,13 @@
   .gallery-grid > .card {
     grid-column: auto;
     grid-row: auto;
+  }
+
+  .gallery-final-row {
+    grid-column: auto;
+    grid-row: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
   }
 
   .gallery-grid .image-container {

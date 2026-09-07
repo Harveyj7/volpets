@@ -9,7 +9,6 @@
   <link href="css/reviews_awards.css" rel="stylesheet">
   <link href="components/navbar.css" rel="stylesheet">
   <script defer src="js/main.js"></script>
-  <script defer src="js/review-carousel.js"></script>
 </head>
 <body>
 <main>
@@ -17,66 +16,114 @@
     <div id="nav-placeholder"></div>
   </header>
 
-  <section class="page-section" data-lazy-reveal>
-    <div class="container">
-      <p class="header-tag">REPUTATION</p>
-      <h1 class="headline">Reviews & Awards</h1>
-      <p class="subtitle">Trust is earned quietly - through consistency, care and the confidence owners feel every
-        day.</p>
+  <section aria-labelledby="reviews-hero-title" class="page-section split-hero reviews-hero" data-lazy-reveal>
+    <div class="container split-hero__layout">
+      <div class="split-hero__content">
+        <p class="header-tag">Trusted over time</p>
+        <h1 id="reviews-hero-title">Their trust is<br><span class="gold-header">everything.</span></h1>
+        <p class="subtitle">Words from the families who know us best, and recognition for the standard we protect every day.</p>
+        <a class="split-hero__link" href="#google-reviews">Read member stories</a>
 
-      <review-carousel aria-label="Client reviews">
-        <review-card client-area="Fulham" client-name="Sarah &amp; Milo" rating="5"
-                     review-title="Wonderful care from day one">
-          The team made Milo feel settled straight away. I get thoughtful updates after every visit and always come home
-          to a very happy dog.
-        </review-card>
-        <review-card client-area="Chelsea" client-name="James &amp; Poppy" rating="5"
-                     review-title="Completely dependable">
-          Volpets has been reliable, kind and flexible whenever our plans change. Poppy absolutely lights up when her
-          walker arrives.
-        </review-card>
-        <review-card client-area="Kensington" client-name="Priya &amp; Luna" rating="5"
-                     review-title="A real home from home">
-          Luna is usually nervous around new people, but she quickly relaxed with the team. The care and attention are
-          genuinely exceptional.
-        </review-card>
-        <review-card client-area="Putney" client-name="Tom &amp; Archie" rating="5" review-title="Above and beyond">
-          Archie receives so much more than a walk. He gets patient, individual care and comes back calm, content and
-          ready for a nap.
-        </review-card>
-        <review-card client-area="Richmond" client-name="Emma &amp; Ted" rating="5"
-                     review-title="The best decision we made">
-          Having Volpets look after Ted has made busy weeks effortless. Communication is excellent and we trust the team
-          completely.
-        </review-card>
-        <review-card client-area="Wandsworth" client-name="Daniel &amp; Olive" rating="5"
-                     review-title="Kind, calm and professional">
-          Olive can be particular about who she trusts, but the gentle approach won her over. Every detail of her
-          routine is remembered.
-        </review-card>
-        <review-card client-area="Barnes" client-name="Rebecca &amp; Finn" rating="5"
-                     review-title="Our dog adores them">
-          Finn waits by the door on walking days. The photos and updates are a lovely touch, and the service has always
-          been faultless.
-        </review-card>
-        <review-card client-area="Clapham" client-name="Alex &amp; Daisy" rating="5"
-                     review-title="Genuine peace of mind">
-          Knowing Daisy is in such capable hands gives us complete peace of mind. The team is responsive, caring and
-          consistently brilliant.
-        </review-card>
-        <review-card client-area="Battersea" client-name="Hannah &amp; Otis" rating="5"
-                     review-title="Flexible and thoughtful">
-          They understand Otis and adapt each visit to what he needs that day. It feels like asking a trusted friend to
-          care for him.
-        </review-card>
-        <review-card client-area="Chiswick" client-name="Michael &amp; Ruby" rating="5"
-                     review-title="Five-star service">
-          From the first meeting, everything felt organised and personal. Ruby is cared for beautifully and we could not
-          recommend Volpets more.
-        </review-card>
-      </review-carousel>
+        <ul aria-label="The Volpets standard" class="split-hero__highlights split-hero__highlights--two-column">
+          <li class="split-hero__highlight">
+            <svg aria-hidden="true" class="line-icon" viewBox="0 0 48 48">
+              <use href="assets/icons.svg#icon-shield-check"></use>
+            </svg>
+            <span>14 recognitions<br>listed since 2021</span>
+          </li>
+          <li class="split-hero__highlight">
+            <svg aria-hidden="true" class="line-icon" viewBox="0 0 24 24">
+              <use href="assets/icons.svg#icon-heart"></use>
+            </svg>
+            <span>Care built on<br>consistency</span>
+          </li>
+          <li class="split-hero__highlight">
+            <svg aria-hidden="true" class="line-icon" viewBox="0 0 48 48">
+              <use href="assets/icons.svg#icon-training"></use>
+            </svg>
+            <span>Training included<br>in daily practice</span>
+          </li>
+          <li class="split-hero__highlight">
+            <svg aria-hidden="true" class="line-icon" viewBox="0 0 24 24">
+              <use href="assets/icons.svg#icon-pin"></use>
+            </svg>
+            <span>Transparency<br>through GPS tracking</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="split-hero__visual">
+      <img alt="Two dogs exploring a stream in the sunshine" fetchpriority="high" src="assets/services-0890.JPG">
+      <div class="split-hero__badge">
+        <svg aria-hidden="true" class="line-icon line-icon--small" viewBox="0 0 48 48">
+          <use href="assets/icons.svg#icon-shield-check"></use>
+        </svg>
+        <span>Recognised<br>year after year</span>
+      </div>
     </div>
   </section>
+
+  <section class="page-section reviews-page-section">
+    <div class="container">
+      <div aria-label="Google reviews" class="sk-ww-google-reviews" data-embed-id="25711087" id="google-reviews" role="region"
+           tabindex="0"></div>
+      <script defer src="https://widgets.sociablekit.com/google-reviews/widget.js"></script>
+      <script defer src="js/google-reviews.js"></script>
+
+      <section aria-labelledby="awards-title" class="awards-showcase">
+        <p class="header-tag">Recognised excellence</p>
+        <h2 id="awards-title">Awarded for the care we deliver every day.</h2>
+        <p>Fourteen recognitions are currently listed by VolPets, spanning dog walking,<br>
+          training, bespoke care, trust and service excellence.</p>
+
+        <div class="awards-showcase__grid">
+          <article>
+            <img alt="Two dogs enjoying a sunny day in the park" loading="lazy" src="assets/about_1957.JPG">
+            <h3>Best Dog Walking<br>&amp; Training Service —<br>London 2026</h3>
+          </article>
+          <article>
+            <img alt="A Bernese mountain dog running across a field" loading="lazy" src="assets/IMG_4454.JPG">
+            <h3>Dog Training<br>Specialists of<br>the Year —<br>2023/24 ·<br>Corporate LiveWire</h3>
+          </article>
+          <article>
+            <img alt="A dog responding to its trainer in the park" loading="lazy" src="assets/IMG_0307.JPG">
+            <h3>Best Dog Walking<br>Company —<br>Central London<br>2024 · LuxLife</h3>
+          </article>
+          <article>
+            <img alt="Four dogs gathered together on a field" loading="lazy" src="assets/services2_0852.JPG">
+            <h3>Service Excellence<br>Award — London<br>(West) 2024/25</h3>
+          </article>
+          <article>
+            <img alt="A small dog running through the park" loading="lazy" src="assets/smalldog_0b3a0555.JPG">
+            <h3>Dog Training<br>Company of the Year —<br>London &amp; Southeast<br>Prestige Awards<br>2025/26</h3>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section aria-labelledby="reviews-membership-title" class="page-section member-cta-section">
+    <div class="container">
+      <div class="member-cta">
+        <img alt="A Volpets dog in the warm evening light" class="member-cta__image" loading="lazy"
+             src="assets/IMG_7294.JPG">
+        <div class="member-cta__copy">
+          <div class="header-tag">Become a member</div>
+          <h2 class="member-cta__title" id="reviews-membership-title">For dogs who are<br>part of the family.</h2>
+          <p>Speak to our team to learn more or check membership availability in your area.</p>
+        </div>
+        <a class="member-cta__button" href="contact.html">Apply to join</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li>Private dog club</li>
+      <li>London</li>
+      <li>Membership enquiries Via contact page</li>
+    </ul>
+  </footer>
 </main>
 </body>
 </html>
