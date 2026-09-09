@@ -34,28 +34,26 @@ body[data-navbar-style] main > header {
   border-bottom: 1px solid transparent;
   margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
   padding: clamp(12px, 2vw, 20px) clamp(1rem, 4vw, 2.5rem);
-  transition:
-    background-color 260ms ease,
-    border-color 260ms ease,
-    box-shadow 260ms ease,
-    -webkit-backdrop-filter 260ms ease,
-    backdrop-filter 260ms ease;
+  transition: background-color 260ms ease,
+  border-color 260ms ease,
+  box-shadow 260ms ease,
+  -webkit-backdrop-filter 260ms ease,
+  backdrop-filter 260ms ease;
   width: auto;
-}
-
-body[data-navbar-style] main > header::before {
-  background: linear-gradient(
-    180deg,
-    rgb(3 7 12 / 82%) 0%,
-    rgb(3 7 12 / 48%) 62%,
-    transparent 100%
-  );
-  content: "";
-  inset: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  transition: opacity 260ms ease;
+  &::before {
+    background: linear-gradient(
+        180deg,
+        rgb(3 7 12 / 82%) 0%,
+        rgb(3 7 12 / 48%) 62%,
+        transparent 100%
+    );
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 260ms ease;
+  }
 }
 
 body[data-navbar-style] #nav-placeholder {
@@ -69,10 +67,9 @@ body[data-navbar-style="hero"] main > header:not(.is-past-hero) {
   -webkit-backdrop-filter: blur(4px) saturate(110%);
   backdrop-filter: blur(4px) saturate(110%);
   background-color: rgb(8 14 23 / 8%);
-}
-
-body[data-navbar-style="hero"] main > header:not(.is-past-hero)::before {
-  opacity: 1;
+  &::before {
+    opacity: 1;
+  }
 }
 
 body[data-navbar-style="solid"] main > header,
@@ -93,12 +90,11 @@ body[data-navbar-style="hero"] main > header.is-past-hero {
   border: 1px solid var(--panel-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  transition:
-    background-color 260ms ease,
-    border-color 260ms ease,
-    box-shadow 260ms ease,
-    -webkit-backdrop-filter 260ms ease,
-    backdrop-filter 260ms ease;
+  transition: background-color 260ms ease,
+  border-color 260ms ease,
+  box-shadow 260ms ease,
+  -webkit-backdrop-filter 260ms ease,
+  backdrop-filter 260ms ease;
 }
 
 body[data-navbar-style="hero"] main > header:not(.is-past-hero) .brand,
@@ -284,7 +280,6 @@ body[data-navbar-style="hero"] main > header.is-past-hero .nav-toggle {
     border-color: rgb(255 255 255 / 18%);
     box-shadow: 0 10px 28px rgb(0 0 0 / 22%);
   }
-
   body[data-navbar-style="solid"] main > header .nav-links,
   body[data-navbar-style="hero"] main > header.is-past-hero .nav-links {
     -webkit-backdrop-filter: none;

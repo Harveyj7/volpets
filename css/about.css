@@ -6,6 +6,13 @@
     letter-spacing: -0.035em;
     line-height: 1.08;
   }
+  h3 {
+    font-size: var(--text-label);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
   p {
     color: var(--muted);
   }
@@ -13,14 +20,6 @@
 
 .about-hero {
   --hero-image-position: center 42%;
-}
-
-.about-section h3 {
-  font-size: var(--text-label);
-  font-weight: var(--weight-bold);
-  letter-spacing: 0.1em;
-  line-height: 1.4;
-  text-transform: uppercase;
 }
 
 .split-layout,
