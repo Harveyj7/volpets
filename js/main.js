@@ -1,7 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navPlaceholder = document.getElementById("nav-placeholder");
+  const pageHeader = document.querySelector("main > header");
+  const navbarTransitionTarget = document.querySelector("[data-navbar-transition]");
   const heroContent = document.querySelector("[data-lazy-reveal]");
   const contactForm = document.getElementById("contact-form");
+
+  if (pageHeader && navbarTransitionTarget) {
+    let navbarUpdatePending = false;
+
+    const updateNavbarSurface = () => {
+      const heroBottom = navbarTransitionTarget.getBoundingClientRect().bottom;
+      const headerBottom = pageHeader.getBoundingClientRect().bottom;
+
+      pageHeader.classList.toggle("is-past-hero", heroBottom <= headerBottom);
+      navbarUpdatePending = false;
+    };
+
+    const requestNavbarUpdate = () => {
+      if (navbarUpdatePending) return;
+
+      navbarUpdatePending = true;
+      window.requestAnimationFrame(updateNavbarSurface);
+    };
+
+    updateNavbarSurface();
+    window.addEventListener("scroll", requestNavbarUpdate, { passive: true });
+    window.addEventListener("resize", requestNavbarUpdate);
+
+    if ("ResizeObserver" in window) {
+      const navbarResizeObserver = new ResizeObserver(requestNavbarUpdate);
+      navbarResizeObserver.observe(pageHeader);
+    }
+  }
 
   if (heroContent) {
     window.setTimeout(() => {
