@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroContent = document.querySelector("[data-lazy-reveal]");
   const contactForm = document.getElementById("contact-form");
 
+  if (pageHeader) {
+    pageHeader.classList.toggle("has-navbar-hero", Boolean(navbarTransitionTarget));
+  }
+
   if (pageHeader && navbarTransitionTarget) {
     let navbarUpdatePending = false;
 
@@ -24,12 +28,22 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     updateNavbarSurface();
+    window.requestAnimationFrame(requestNavbarUpdate);
+    window.addEventListener("load", requestNavbarUpdate);
+    window.addEventListener("pageshow", requestNavbarUpdate);
+    window.addEventListener("hashchange", requestNavbarUpdate);
     window.addEventListener("scroll", requestNavbarUpdate, { passive: true });
     window.addEventListener("resize", requestNavbarUpdate);
 
     if ("ResizeObserver" in window) {
       const navbarResizeObserver = new ResizeObserver(requestNavbarUpdate);
       navbarResizeObserver.observe(pageHeader);
+      navbarResizeObserver.observe(navbarTransitionTarget);
+    }
+
+    if ("IntersectionObserver" in window) {
+      const navbarIntersectionObserver = new IntersectionObserver(requestNavbarUpdate);
+      navbarIntersectionObserver.observe(navbarTransitionTarget);
     }
   }
 
