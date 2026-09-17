@@ -11,42 +11,102 @@
   <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script defer src="js/main.js"></script>
 </head>
-<body>
+<body class="contact-page">
 <main>
   <header>
     <div id="nav-placeholder"></div>
   </header>
-  <section class="page-section" data-lazy-reveal>
-    <div class="container">
-      <p class="header-tag">PRIVATE ENQUIRIES</p>
-      <h1 class="headline">A more considered kind of dog care.</h1>
-      <p class="subtitle">Contact VolPets to discuss your dog, routine and suitability for membership.</p>
 
+  <section class="contact-hero" data-navbar-transition>
+    <div class="contact-hero__content" data-lazy-reveal>
+      <p class="header-tag">Membership enquiries</p>
+      <h1>Tell us about<br>your dog.</h1>
+      <p class="contact-hero__lead">Membership begins with a conversation.</p>
+      <p class="contact-hero__copy">Share a little about your dog, your routine and the support you are looking for. We will come back to you personally.</p>
+      <a class="contact-button" href="#enquiry">Start your enquiry</a>
+    </div>
+  </section>
+
+  <section class="enquiry-section" id="enquiry">
+    <div class="enquiry-layout">
       <form class="contact-form" id="contact-form">
         <div class="contact-form__field">
           <label for="contact-name">Your name</label>
           <input autocomplete="name" id="contact-name" name="from_name" required type="text">
         </div>
-
         <div class="contact-form__field">
-          <label for="contact-email">Your email</label>
+          <label for="contact-email">Email address</label>
           <input autocomplete="email" id="contact-email" name="from_email" required type="email">
         </div>
-
         <div class="contact-form__field">
-          <label for="contact-message">How can we help?</label>
-          <textarea id="contact-message" name="message" required rows="5"></textarea>
+          <label for="contact-phone">Phone number</label>
+          <input autocomplete="tel" id="contact-phone" name="phone" type="tel">
+        </div>
+        <div class="contact-form__field">
+          <label for="dog-name">Dog's name</label>
+          <input id="dog-name" name="dog_name" type="text">
+        </div>
+        <div class="contact-form__field">
+          <label for="dog-details">Breed &amp; age</label>
+          <input id="dog-details" name="breed_and_age" type="text">
+        </div>
+        <div class="contact-form__field">
+          <label for="contact-postcode">Home postcode</label>
+          <input autocomplete="postal-code" id="contact-postcode" name="postcode" type="text">
         </div>
 
+        <fieldset class="contact-form__services">
+          <legend>How can we help?</legend>
+          <label><input name="services" type="checkbox" value="Regular walks"><span>Regular walks</span></label>
+          <label><input name="services" type="checkbox" value="1-to-1 training"><span>1-to-1 training</span></label>
+          <label><input name="services" type="checkbox" value="Behavioural support"><span>Behavioural support</span></label>
+          <label><input name="services" type="checkbox" value="Home boarding"><span>Home boarding</span></label>
+          <label class="contact-form__service-wide"><input name="services" type="checkbox" value="Private transport"><span>Private transport</span></label>
+        </fieldset>
+
+        <div class="contact-form__field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" required rows="5"></textarea>
+        </div>
         <div aria-hidden="true" class="contact-form__honeypot">
           <label for="contact-website">Website</label>
           <input autocomplete="off" id="contact-website" name="website" tabindex="-1" type="text">
         </div>
-
-        <button class="contact-form__submit" id="submit-btn" type="submit">Send message</button>
+        <button class="contact-form__submit" id="submit-btn" type="submit">Send enquiry</button>
         <p aria-live="polite" class="contact-form__status" id="contact-form-status" role="status"></p>
       </form>
+
+      <aside class="contact-details" aria-label="Contact details">
+        <img alt="A happy Volpets dog enjoying a walk in the park" loading="lazy" src="assets/contact_6156.JPG">
+        <div class="contact-details__list">
+          <a href="tel:+442046204398">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3 4 5c0 7.7 6.3 14 14 14l2-3-4-3-2 2c-3-1-5-3-6-6l2-2-3-4Z"/></svg>
+            <span><strong>Call</strong>+44 20 4620 4398</span>
+          </a>
+          <a href="mailto:admin@volpets.co.uk">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect height="14" rx="1" width="18" x="3" y="5"/><path d="m4 7 8 6 8-6"/></svg>
+            <span><strong>Email</strong>admin@volpets.co.uk</span>
+          </a>
+          <div>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-13A7 7 0 0 0 5 9c0 6.8 7 13 7 13Z"/><circle cx="12" cy="9" r="2"/></svg>
+            <span><strong>Visit</strong>Lancaster Gate, London W2 3LG</span>
+          </div>
+        </div>
+        <p class="contact-details__note">Walking membership runs Monday–Friday in a fixed slot. Every new dog is assessed before joining a carefully matched pack.</p>
+      </aside>
     </div>
+  </section>
+
+  <ol class="enquiry-steps" aria-label="Membership enquiry process">
+    <li><span class="enquiry-steps__icon"><svg aria-hidden="true" class="line-icon"><use href="assets/icons.svg#icon-training"/></svg></span><span><strong>01<br>Enquire</strong>Tell us about your dog.</span></li>
+    <li><span class="enquiry-steps__icon"><svg aria-hidden="true" class="line-icon"><use href="assets/icons.svg#icon-pack"/></svg></span><span><strong>02<br>Assessment</strong>We meet, listen and understand.</span></li>
+    <li><span class="enquiry-steps__icon"><svg aria-hidden="true" class="line-icon"><use href="assets/icons.svg#icon-shield-check"/></svg></span><span><strong>03<br>Welcome</strong>The right care plan, one trusted team.</span></li>
+  </ol>
+
+  <section class="availability">
+    <h2>A good fit begins with an honest conversation.</h2>
+    <p>Private membership. Limited availability.</p>
+    <a href="#enquiry">Check availability</a>
   </section>
 </main>
 </body>

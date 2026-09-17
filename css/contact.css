@@ -1,109 +1,383 @@
-/* Contact form */
-.contact-form {
+.contact-page main {
+  overflow: hidden;
+}
+
+.contact-page main > header {
+  inset: 0 0 auto;
+  margin: 0;
+  position: absolute;
+}
+
+.contact-hero {
+  align-items: center;
+  background: linear-gradient(90deg, rgb(3 17 29 / 96%) 0%, rgb(3 17 29 / 70%) 38%, rgb(3 17 29 / 8%) 72%),
+  url("../assets/home-dog-club-3.jpg") center 42% / cover;
+  border-bottom: 1px solid rgb(212 175 55 / 65%);
+  display: flex;
+  margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
+  min-height: clamp(610px, 82vh, 800px);
+  padding: clamp(130px, 17vh, 180px) clamp(1.25rem, 6vw, 5rem) 70px;
+}
+
+.contact-hero__content {
+  max-width: 490px;
+}
+
+.contact-hero h1 {
+  font-size: clamp(50px, 6vw, 76px);
+  line-height: .98;
+  margin-bottom: 28px;
+}
+
+.contact-hero__lead {
+  border-bottom: 1px solid rgb(212 175 55 / 65%);
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+}
+
+.contact-hero__copy {
+  color: var(--muted);
+  font-size: .94rem;
+  margin-bottom: 28px;
+  max-width: 430px;
+}
+
+.contact-button,
+.contact-form__submit {
+  align-items: center;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  color: var(--ink);
+  display: inline-flex;
+  font-size: .72rem;
+  font-weight: 800;
+  justify-content: center;
+  letter-spacing: .16em;
+  min-height: 52px;
+  padding: 14px 28px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.contact-button:hover,
+.contact-button:focus-visible,
+.contact-form__submit:hover,
+.contact-form__submit:focus-visible {
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+
+.enquiry-section {
+  border-bottom: 1px solid rgb(212 175 55 / 55%);
+  margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
+  padding: clamp(36px, 5vw, 64px) clamp(1rem, 4vw, 2.5rem);
+}
+
+.enquiry-layout {
+  align-items: start;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.75rem;
+  gap: clamp(28px, 4vw, 48px);
+  grid-template-columns: minmax(0, .96fr) minmax(0, 1fr);
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.contact-form {
+  border: 1px solid rgb(212 175 55 / 72%);
+  display: grid;
+  gap: 14px;
+  padding: clamp(22px, 3vw, 34px);
 }
 
 .contact-form__field {
   display: grid;
-  gap: 0.45rem;
+  gap: 5px;
 }
 
-.contact-form__field:nth-of-type(3) {
-  grid-column: 1 / -1;
-}
-
-.contact-form__honeypot {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
-.contact-form label {
-  color: var(--muted);
-  font-size: 0.72rem;
+.contact-form label,
+.contact-form legend {
+  color: var(--text);
+  font-size: .68rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: .14em;
   text-transform: uppercase;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  border: 1px solid var(--panel-border);
-  border-radius: 8px;
-  padding: 0.8rem 0.9rem;
+  background: transparent;
+  border: 1px solid rgb(212 175 55 / 66%);
+  border-radius: 0;
   color: var(--text);
-  background: rgb(255 255 255 / 8%);
   font: inherit;
+  min-height: 42px;
+  padding: 9px 11px;
+  width: 100%;
 }
 
 .contact-form textarea {
-  min-height: 7rem;
+  min-height: 122px;
   resize: vertical;
 }
 
 .contact-form input:focus-visible,
 .contact-form textarea:focus-visible {
-  border-color: var(--accent);
-  outline: 2px solid rgb(195 220 1 / 30%);
-  outline-offset: 2px;
+  border-color: var(--text);
+  outline: 1px solid var(--text);
+}
+
+.contact-form__services {
+  border: 0;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form__services legend {
+  margin-bottom: 6px;
+}
+
+.contact-form__services label {
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-form__services input {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.contact-form__services span {
+  align-items: center;
+  border: 1px solid rgb(212 175 55 / 68%);
+  display: flex;
+  justify-content: center;
+  min-height: 42px;
+  padding: 7px;
+  text-align: center;
+}
+
+.contact-form__services input:checked + span,
+.contact-form__services input:focus-visible + span {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.contact-form__service-wide {
+  grid-column: 1 / -1;
+}
+
+.contact-form__honeypot {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .contact-form__submit {
-  justify-self: start;
-  border: 0;
-  border-radius: 8px;
-  padding: 0.85rem 1.25rem;
-  color: var(--ink);
-  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 2px;
   cursor: pointer;
-  font: inherit;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.contact-form__submit:hover,
-.contact-form__submit:focus-visible {
-  background: #d5ef0c;
-  outline: none;
+  height: auto;
+  width: 100%;
 }
 
 .contact-form__submit:disabled {
   cursor: wait;
-  opacity: 0.7;
+  opacity: .65;
 }
 
 .contact-form__status {
-  align-self: center;
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: .85rem;
+  min-height: 1.35em;
+  text-align: center;
 }
 
-.contact-form__status--success {
+.contact-form__status--success { color: var(--accent); }
+.contact-form__status--error { color: #ffb4ab; }
+
+.contact-details > img {
+  aspect-ratio: 1.1;
+  display: block;
+  object-fit: cover;
+  object-position: center 43%;
+  width: 100%;
+}
+
+.contact-details__list a,
+.contact-details__list > div {
+  align-items: center;
+  border-bottom: 1px solid rgb(212 175 55 / 58%);
+  color: var(--muted);
+  display: flex;
+  gap: 17px;
+  padding: 17px 7px;
+  text-decoration: none;
+}
+
+.contact-details__list svg {
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  fill: none;
+  flex: 0 0 46px;
+  height: 46px;
+  padding: 9px;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1;
+  width: 46px;
+}
+
+.contact-details__list span {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.contact-details__list strong {
   color: var(--accent);
+  display: block;
+  font-family: var(--sans);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
 
-.contact-form__status--error {
-  color: #ffb4ab;
+.contact-details__note {
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+  padding: 22px 7px 0;
 }
 
-@media (max-width: 500px) {
-  .contact-form {
-    grid-template-columns: 1fr;
-  }
+.enquiry-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
+  padding: 28px max(clamp(1rem, 4vw, 2.5rem), calc((100vw - 1180px) / 2));
+}
 
-  .contact-form__field:nth-of-type(3) {
-    grid-column: auto;
+.enquiry-steps li {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  min-width: 0;
+  padding: 0 26px;
+}
+
+.enquiry-steps li + li {
+  border-left: 1px solid rgb(212 175 55 / 55%);
+}
+
+.enquiry-steps__icon {
+  align-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  display: flex;
+  flex: 0 0 62px;
+  height: 62px;
+  justify-content: center;
+}
+
+.enquiry-steps__icon .line-icon {
+  height: 34px;
+  width: 34px;
+}
+
+.enquiry-steps li > span:last-child {
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
+.enquiry-steps strong {
+  color: var(--accent);
+  display: block;
+  font-size: .78rem;
+  letter-spacing: .16em;
+  line-height: 1.45;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.availability {
+  border-block: 1px solid rgb(212 175 55 / 55%);
+  margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
+  padding: clamp(36px, 5vw, 54px) 20px;
+  text-align: center;
+}
+
+.availability h2 {
+  font-size: clamp(26px, 3.4vw, 39px);
+  line-height: 1.2;
+}
+
+.availability p {
+  color: var(--muted);
+  margin: 5px 0 17px;
+}
+
+.availability a {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  padding: 11px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .contact-hero {
+    background-position: 58% center;
+    min-height: 680px;
   }
+  .enquiry-layout { grid-template-columns: 1fr; }
+  .contact-details { display: grid; grid-template-columns: .85fr 1.15fr; }
+  .contact-details > img { aspect-ratio: auto; height: 100%; }
+  .contact-details__note { grid-column: 1 / -1; }
+  .enquiry-steps { gap: 20px; }
+  .enquiry-steps li { align-items: flex-start; flex-direction: column; padding: 0 18px; }
+}
+
+@media (max-width: 560px) {
+  .contact-hero {
+    align-items: end;
+    background: linear-gradient(0deg, rgb(3 17 29 / 98%) 0%, rgb(3 17 29 / 52%) 58%, rgb(3 17 29 / 20%) 100%),
+    url("../assets/home-dog-club-3.jpg") 62% center / cover;
+    min-height: 720px;
+    padding-bottom: 50px;
+  }
+  .contact-hero h1 { font-size: clamp(46px, 15vw, 62px); }
+  .contact-form { padding: 18px; }
+  .contact-details { display: block; }
+  .contact-details > img { aspect-ratio: 1; height: auto; }
+  .contact-form__services { grid-template-columns: 1fr; }
+  .contact-form__service-wide { grid-column: auto; }
+  .enquiry-steps { grid-template-columns: 1fr; padding-block: 18px; }
+  .enquiry-steps li { align-items: center; flex-direction: row; padding: 18px 4px; }
+  .enquiry-steps li + li { border-left: 0; border-top: 1px solid rgb(212 175 55 / 55%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-button,
+  .contact-form__submit { transition: none; }
 }
