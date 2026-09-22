@@ -16,6 +16,7 @@
   --text-label: 0.75rem;
   --weight-light: 400;
   --text-small: 0.875rem;
+  --section-divider: 1px solid rgb(212 175 55 / 55%);
 }
 
 * {
@@ -127,15 +128,20 @@ button {
 .page-section {
   align-items: center;
   background: linear-gradient(180deg, transparent, rgb(255 255 255 / 2%) 45%, transparent);
-  border-top: 1px solid rgb(255 255 255 / 9%);
   display: flex;
   padding-block: clamp(36px, 6vh, 64px);
+}
+
+/* A single shared divider for top-level and explicitly nested content sections. */
+main > section:not(:first-of-type),
+main > section + footer,
+.section-partition {
+  border-top: var(--section-divider);
 }
 
 /* Shared full-bleed introduction used by About, Services, and Reviews & Awards. */
 .split-hero {
   align-items: stretch;
-  border-bottom: 2px solid var(--accent);
   margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
   min-height: calc(100vh - clamp(92px, 10vw, 112px));
   min-height: calc(100svh - clamp(92px, 10vw, 112px));
@@ -351,7 +357,6 @@ button {
 
 footer {
   background: #090f1a;
-  border-block: 1px solid rgb(212 175 55 / 48%);
   margin-left: calc(50% - 50vw);
   width: 100vw;
   ul {

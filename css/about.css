@@ -1,5 +1,4 @@
 .about-section {
-  border-top: 1px solid rgb(212 175 55 / 55%);
   position: relative;
   h2 {
     font-size: clamp(32px, 4vw, 52px);
@@ -83,9 +82,10 @@
       padding: 22px 24px 25px;
     }
     img {
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 10 / 15;
       display: block;
       object-fit: cover;
+      object-position: center 10%;
       transition: transform 500ms ease;
       width: 100%;
       &:hover {

@@ -3,10 +3,13 @@ body.page {
   main {
     background: #031827;
     min-height: 100vh;
+    min-height: 100svh;
     padding: 0;
     & > header {
+      inset: 0 0 auto;
       margin: 0;
       padding: clamp(12px, 1.6vw, 18px) clamp(18px, 3.5vw, 46px);
+      position: fixed;
       width: 100%;
     }
   }
@@ -134,7 +137,6 @@ body.page {
 
 .benefits {
   background: #031827;
-  border-block: 1px solid rgb(212 175 55 / 55%);
   .benefits__list {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -177,7 +179,6 @@ body.page {
 .availability {
   align-items: center;
   background: #031827;
-  border-bottom: 1px solid rgb(212 175 55 / 55%);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -194,6 +195,26 @@ body.page {
     min-height: 37px;
     min-width: 242px;
     padding-block: 7px;
+  }
+}
+
+@media (min-width: 901px) and (min-height: 640px) {
+  body.page main {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) 78px 114px;
+    height: 100vh;
+    height: 100svh;
+  }
+
+  .hero {
+    min-height: 0;
+  }
+
+  .benefits,
+  .benefits__list,
+  .availability {
+    height: 100%;
+    min-height: 0;
   }
 }
 

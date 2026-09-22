@@ -12,7 +12,6 @@
   align-items: center;
   background: linear-gradient(90deg, rgb(3 17 29 / 96%) 0%, rgb(3 17 29 / 70%) 38%, rgb(3 17 29 / 8%) 72%),
   url("../assets/home-dog-club-3.jpg") center 42% / cover;
-  border-bottom: 1px solid rgb(212 175 55 / 65%);
   display: flex;
   margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
   min-height: clamp(610px, 82vh, 800px);
@@ -73,7 +72,6 @@
 }
 
 .enquiry-section {
-  border-bottom: 1px solid rgb(212 175 55 / 55%);
   margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
   padding: clamp(36px, 5vw, 64px) clamp(1rem, 4vw, 2.5rem);
 }
@@ -317,7 +315,6 @@
 }
 
 .availability {
-  border-block: 1px solid rgb(212 175 55 / 55%);
   margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
   padding: clamp(36px, 5vw, 54px) 20px;
   text-align: center;
