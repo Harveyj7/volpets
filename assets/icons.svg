@@ -35,4 +35,44 @@
     <path d="M3 24s8-13 21-13 21 13 21 13-8 13-21 13S3 24 3 24Z"/>
     <circle cx="24" cy="24" r="6"/>
   </symbol>
+
+  <symbol id="icon-dog-walk" viewBox="0 0 48 48">
+    <path d="M11 28c0-6 4-10 10-10h9c5 0 8 4 8 9v9M14 27v11M31 27v11"/>
+    <path d="M18 18 15 9l8 5M38 24l6-5M9 22l-5-3M11 38h7M30 38h8"/>
+    <circle cx="25" cy="18" r="1"/>
+  </symbol>
+
+  <symbol id="icon-behaviour" viewBox="0 0 48 48">
+    <path d="M17 21c-4-4-10-1-9 4 1 4 6 7 10 4M31 21c4-4 10-1 9 4-1 4-6 7-10 4"/>
+    <path d="M18 18c-3-5 1-10 5-7 1-6 9-6 10 0 5-3 8 3 5 7 5 2 4 9-1 10-2 10-9 15-13 15S13 38 11 28c-5-1-6-8-1-10 0-4 5-6 8 0Z"/>
+    <path d="M19 31c3-3 7-3 10 0"/>
+  </symbol>
+
+  <symbol id="icon-home" viewBox="0 0 48 48">
+    <path d="M5 23 24 7l19 16M10 20v21h28V20M19 41V29h10v12"/>
+    <path d="M34 10v7"/>
+  </symbol>
+
+  <symbol id="icon-stethoscope" viewBox="0 0 48 48">
+    <path d="M9 6v13c0 7 4 11 10 11s10-4 10-11V6M5 6h8M25 6h8"/>
+    <path d="M19 30v3c0 6 4 10 10 10s10-4 10-10v-5"/>
+    <circle cx="39" cy="24" r="4"/>
+  </symbol>
+
+  <symbol id="icon-health" viewBox="0 0 48 48">
+    <path d="M24 42S7 32 7 18c0-9 11-12 17-4 6-8 17-5 17 4 0 14-17 24-17 24Z"/>
+    <path d="M13 25h7l3-7 4 13 3-6h6"/>
+  </symbol>
+
+  <symbol id="icon-reiki" viewBox="0 0 48 48">
+    <path d="M24 43c-7-7-7-14 0-20 7 6 7 13 0 20ZM24 43c-11 0-17-5-18-14 9-2 15 2 18 14ZM24 43c11 0 17-5 18-14-9-2-15 2-18 14Z"/>
+    <path d="M24 29c-6-4-8-10-4-17 7 2 10 8 4 17ZM24 29c6-4 8-10 4-17-7 2-10 8-4 17Z"/>
+  </symbol>
+
+  <symbol id="icon-transport" viewBox="0 0 48 48">
+    <path d="M5 15h26l8 9h4v13H5V15Z"/>
+    <path d="M31 16v9h8M10 15l3-6h13l3 6"/>
+    <circle cx="14" cy="37" r="4"/>
+    <circle cx="36" cy="37" r="4"/>
+  </symbol>
 </svg>

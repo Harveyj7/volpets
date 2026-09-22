@@ -34,13 +34,17 @@ body.page {
     width: 100%;
     will-change: opacity;
     z-index: -2;
+    &.image--one {
+      object-position: center 48%;
+    }
     &.image--two {
       animation-delay: -6s;
-      object-position: center 48%;
+      object-position: center 40%;
+      transform: scaleX(-1);
     }
     &.image--three {
       animation-delay: -3s;
-      object-position: center 48%;
+      object-position: center 52%;
     }
   }
   .hero__shade {
