@@ -1,7 +1,11 @@
+:root {
+  /* Adjust this value to move the navbar content toward or away from the viewport edges. */
+  --navbar-edge-margin: clamp(1rem, 2vw, 2rem);
+}
+
 #nav-placeholder {
   display: flex;
   margin-inline: auto;
-  max-width: 1300px;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -12,21 +16,24 @@ main > header {
   display: flex;
   isolation: isolate;
   margin-inline: calc(clamp(1rem, 4vw, 2.5rem) * -1);
-  padding: clamp(12px, 2vw, 20px) clamp(1rem, 4vw, 2.5rem);
+  padding: var(--navbar-block-padding) var(--navbar-edge-margin);
   position: sticky;
   top: 0;
   width: auto;
   z-index: 1000;
+  body.page & {
+    padding-inline: var(--navbar-edge-margin);
+  }
 }
 
 main > header::before {
   -webkit-backdrop-filter: blur(20px) saturate(135%);
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 24px), transparent 100%);
   backdrop-filter: blur(20px) saturate(135%);
   background: rgb(8 14 23 / 94%);
   content: "";
   inset: 0 0 -24px;
-  mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000000 0%, #000000 calc(100% - 24px), transparent 100%);
+  mask-image: linear-gradient(to bottom, #000000 0%, #000000 calc(100% - 24px), transparent 100%);
   opacity: 1;
   pointer-events: none;
   position: absolute;

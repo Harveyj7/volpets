@@ -3,7 +3,7 @@ body.page {
   main {
     background: #031827;
     min-height: 100vh;
-    min-height: 100svh;
+    /*min-height: 100svh;*/
     padding: 0;
     & > header {
       inset: 0 0 auto;
@@ -205,11 +205,9 @@ body.page {
     height: 100vh;
     height: 100svh;
   }
-
   .hero {
     min-height: 0;
   }
-
   .benefits,
   .benefits__list,
   .availability {

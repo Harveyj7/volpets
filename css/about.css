@@ -102,6 +102,13 @@
   }
 }
 
+@media (min-width: 901px) {
+  .people-grid {
+    margin-inline: auto;
+    width: 70%;
+  }
+}
+
 .standards-strip {
   border: 1px solid rgb(212 175 55 / 48%);
   border-radius: 8px;

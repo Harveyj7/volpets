@@ -5,15 +5,12 @@ main {
     min-height: 100svh;
     position: relative;
     z-index: 1;
-
     .container {
       align-items: stretch;
     }
-
     .header-tag {
       align-self: flex-start;
     }
-
     .services-showcase__intro {
       align-items: start;
       border-bottom: 1px solid rgb(255 255 255 / 22%);
@@ -22,27 +19,23 @@ main {
       grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
       margin-bottom: clamp(30px, 4vw, 48px);
       padding-bottom: clamp(24px, 3vw, 38px);
-
       h2 {
         font-size: clamp(32px, 4vw, 48px);
         letter-spacing: -0.04em;
         line-height: 1.05;
       }
-
       p {
         color: var(--muted);
         font-size: var(--text-small);
         max-width: 510px;
       }
     }
-
     .services-showcase__grid {
       display: grid;
       gap: clamp(38px, 4.4vw, 64px) clamp(20px, 2.4vw, 32px);
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-
   .service-card {
     & > img {
       border-radius: var(--radius);
@@ -53,18 +46,15 @@ main {
       transition: transform 500ms ease;
       width: 100%;
     }
-
     &:hover > img {
       transform: scale(1.025);
     }
-
     .service-card__body {
       align-items: flex-start;
       display: grid;
       gap: 16px;
       grid-template-columns: 40px minmax(0, 1fr);
       padding-top: 20px;
-
       h3 {
         font-size: var(--text-label);
         font-weight: var(--weight-bold);
@@ -73,11 +63,9 @@ main {
         margin-bottom: 9px;
         text-transform: uppercase;
       }
-
       p {
         margin-bottom: 12px;
       }
-
       a {
         color: var(--accent);
         font-size: 0.68rem;
@@ -85,43 +73,35 @@ main {
         letter-spacing: 0.12em;
         text-decoration: none;
         text-transform: uppercase;
-
         span {
           display: inline-block;
           margin-left: 5px;
           transition: transform 180ms ease;
         }
-
         &:hover span,
         &:focus-visible span {
           transform: translateX(4px);
         }
       }
     }
-
     .service-card__icon {
       height: 40px;
       width: 40px;
     }
   }
-
   .service-card--wide {
     grid-column: span 2;
   }
-
   .service-card p,
   .standard-item p {
     color: var(--muted);
     font-size: var(--text-small);
   }
-
   .standards-section {
     background: var(--page-bg);
-    padding-bottom: clamp(16px, 2vw, 24px);
-    padding-top: 0;
+    padding: clamp(16px, 2vw, 24px) clamp(16px, 2vw, 24px);
     position: relative;
     z-index: 1;
-
     .standards-panel {
       border: 1px solid rgb(212 175 55 / 48%);
       border-radius: 8px;
@@ -129,31 +109,25 @@ main {
       grid-template-columns: minmax(270px, 1.45fr) repeat(5, minmax(120px, 1fr));
       overflow: hidden;
     }
-
     .standards-panel__intro,
     .standard-item {
       padding: clamp(26px, 3vw, 42px) clamp(18px, 2.2vw, 32px);
     }
-
     .standards-panel__intro {
       align-self: center;
-
       h2 {
         font-size: clamp(24px, 2.2vw, 34px);
       }
     }
-
     .standard-item {
       align-items: center;
       border-left: 1px solid rgb(255 255 255 / 14%);
       display: flex;
       flex-direction: column;
       text-align: center;
-
       .line-icon {
         margin-bottom: 22px;
       }
-
       h3 {
         font-size: var(--text-label);
         font-weight: var(--weight-bold);
@@ -164,7 +138,6 @@ main {
       }
     }
   }
-
 }
 
 @media (max-width: 1100px) {
@@ -173,14 +146,11 @@ main {
       .standards-panel {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
-
       .standards-panel__intro {
         grid-column: 1 / -1;
       }
-
       .standard-item {
         border-top: 1px solid rgb(255 255 255 / 14%);
-
         &:first-of-type,
         &:nth-of-type(4) {
           border-left: 0;
@@ -196,7 +166,6 @@ main {
       gap: 20px;
       grid-template-columns: 1fr;
     }
-
     .services-showcase .services-showcase__grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -209,16 +178,13 @@ main {
     .standards-section .standards-panel {
       grid-template-columns: 1fr;
     }
-
     .service-card--wide {
       grid-column: auto;
     }
-
     .standards-section {
       .standards-panel__intro {
         grid-column: auto;
       }
-
       .standard-item {
         border-left: 0;
         border-top: 1px solid rgb(255 255 255 / 14%);

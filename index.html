@@ -6,6 +6,7 @@
   <meta content="Private dog walking, training and membership-led care for a limited circle of London dogs."
         name="description">
   <title>Volpets | Private Dog Club London</title>
+  <link as="image" fetchpriority="high" href="assets/home-dog-club.jpg" rel="preload">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
   <link href="components/navbar.css" rel="stylesheet">
@@ -20,12 +21,14 @@
 
   <section aria-labelledby="hero-title" class="hero" data-navbar-transition>
     <img alt="A cockapoo relaxing in the grass with a stick"
-         class="hero__image image--one" fetchpriority="high"
-         src="assets/home-dog-club.jpg">
+         class="hero__image image--one" decoding="async" fetchpriority="high"
+         height="1950" loading="eager" src="assets/home-dog-club.jpg" width="2600">
     <img alt="" aria-hidden="true" class="hero__image image--two"
-         decoding="async" fetchpriority="low" src="assets/home-dog-club-2.jpg">
+         decoding="async" fetchpriority="low" height="1950" loading="lazy"
+         src="assets/home-dog-club-2.jpg" width="2600">
     <img alt="" aria-hidden="true" class="hero__image image--three"
-         decoding="async" fetchpriority="low" src="assets/home-dog-club-3.jpg">
+         decoding="async" fetchpriority="low" height="1950" loading="lazy"
+         src="assets/home-dog-club-3.jpg" width="2600">
     <div class="hero__shade"></div>
 
     <div class="hero__inner">
