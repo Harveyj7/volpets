@@ -9,8 +9,8 @@
   </symbol>
 
   <symbol id="icon-pin" viewBox="0 0 24 24">
-    <path d="M12 21s6-5.3 6-11a6 6 0 1 0-12 0c0 5.7 6 11 6 11Z"/>
     <circle cx="12" cy="10" r="2"/>
+    <path d="M12 21s6-5.3 6-11a6 6 0 1 0-12 0c0 5.7 6 11 6 11Z"/>
   </symbol>
 
   <symbol id="icon-shield-check" viewBox="0 0 48 48">
@@ -28,25 +28,48 @@
     <circle cx="14" cy="13" r="5"/>
     <circle cx="32" cy="13" r="5"/>
     <path d="M6 35c0-9 3-15 8-15s8 6 8 15M24 35c0-9 3-15 8-15s8 6 8 15"/>
-    <path d="M18 42c0-6 4-10 8-10s8 4 8 10"/>
+    <path d="M15 45c0-8 4-10 8-10s8 4 8 10"/>
   </symbol>
 
   <symbol id="icon-focus" viewBox="0 0 48 48">
-    <path d="M3 24s8-13 21-13 21 13 21 13-8 13-21 13S3 24 3 24Z"/>
     <circle cx="24" cy="24" r="6"/>
+    <path d="M3 24s8-13 21-13 21 13 21 13-8 13-21 13S3 24 3 24Z"/>
   </symbol>
 
   <symbol id="icon-dog-walk" viewBox="0 0 48 48">
-    <path d="M11 28c0-6 4-10 10-10h9c5 0 8 4 8 9v9M14 27v11M31 27v11"/>
-    <path d="M18 18 15 9l8 5M38 24l6-5M9 22l-5-3M11 38h7M30 38h8"/>
-    <circle cx="25" cy="18" r="1"/>
+    <circle cx="40" cy="17" r=".75"/>
+    <path d="m38 8-6 1 3 7M21 24l-1 12h-5M31 15l4 5M31 24l1 7 4 3h2"/>
+    <path
+      d="M5 17c3 4 6 5 10 3 2-4 5-6 10-6h6c1-3 3-5 7-7l1 7c3 1 5 1 5 6l-5 2-4-2v16h-5l-2-12H18l-2 12h-5l2-15"/>
   </symbol>
 
+  <!--  looks like a monkey-->
+  <!--  <symbol id="icon-behaviour" viewBox="0 0 48 48">-->
+  <!--    <circle cx="19" cy="23" r="1"/>-->
+  <!--    <circle cx="29" cy="23" r="1"/>-->
+  <!--    <path d="M15 16c1-5 5-8 9-8s8 3 9 8c2 4 3 8 3 13 0 8-5 14-12 14s-12-6-12-14c0-5 1-9 3-13Z"/>-->
+  <!--    <path d="M15 16c-3-4-8-6-10-2-2 5 1 14 7 17M33 16c3-4 8-6 10-2 2 5-1 14-7 17"/>-->
+  <!--    <path d="M17 32c0-4 3-7 7-7s7 3 7 7c0 5-3 9-7 9s-7-4-7-9Z"/>-->
+  <!--    <path-->
+  <!--      d="M20 30c1-2 7-2 8 0 0 2-2 3-4 3s-4-1-4-3ZM24 33v2M24 35c-2 0-3 1-4 2M24 35c2 0 3 1 4 2"/>-->
+  <!--  </symbol>-->
+  <!--  Smiley face-->
   <symbol id="icon-behaviour" viewBox="0 0 48 48">
-    <path d="M17 21c-4-4-10-1-9 4 1 4 6 7 10 4M31 21c4-4 10-1 9 4-1 4-6 7-10 4"/>
-    <path d="M18 18c-3-5 1-10 5-7 1-6 9-6 10 0 5-3 8 3 5 7 5 2 4 9-1 10-2 10-9 15-13 15S13 38 11 28c-5-1-6-8-1-10 0-4 5-6 8 0Z"/>
-    <path d="M19 31c3-3 7-3 10 0"/>
+    <circle cx="24" cy="24" fill="none" r="18" stroke-width="2"/>
+    <circle cx="17" cy="18" fill="currentColor" r="2"/>
+    <circle cx="31" cy="18" fill="currentColor" r="2"/>
+    <path d="M16 28c3 5 13 5 16 0" fill="none" stroke-linecap="round" stroke-width="2"/>
   </symbol>
+  <!--  looks like a bear-->
+  <!--  <symbol id="icon-behaviour" viewBox="0 0 48 48">-->
+  <!--    <circle cx="18.5" cy="24" r="1"/>-->
+  <!--    <circle cx="29.5" cy="24" r="1"/>-->
+  <!--    <path-->
+  <!--      d="M16 14c-3-3-8-4-10-1-2 4 0 14 7 17 0 7 4 12 11 12s11-5 11-12c7-3 9-13 7-17-2-3-7-2-10 1-2-4-5-6-8-6s-6 2-8 6Z"/>-->
+  <!--    <path d="M15 17c-3-2-5-2-6-1 0 4 1 7 4 9M33 17c3-2 5-2 6-1 0 4-1 7-4 9"/>-->
+  <!--    <path-->
+  <!--      d="M20 30c1-2 7-2 8 0 0 2-2 3-4 3s-4-1-4-3ZM24 33v2M24 35c-2 0-3 1-4 2M24 35c2 0 3 1 4 2"/>-->
+  <!--  </symbol>-->
 
   <symbol id="icon-home" viewBox="0 0 48 48">
     <path d="M5 23 24 7l19 16M10 20v21h28V20M19 41V29h10v12"/>
@@ -54,9 +77,9 @@
   </symbol>
 
   <symbol id="icon-stethoscope" viewBox="0 0 48 48">
-    <path d="M9 6v13c0 7 4 11 10 11s10-4 10-11V6M5 6h8M25 6h8"/>
-    <path d="M19 30v3c0 6 4 10 10 10s10-4 10-10v-5"/>
     <circle cx="39" cy="24" r="4"/>
+    <path d="M19 30v3c0 6 4 10 10 10s10-4 10-10v-5"/>
+    <path d="M9 6v13c0 7 4 11 10 11s10-4 10-11V6M5 6h8M25 6h8"/>
   </symbol>
 
   <symbol id="icon-health" viewBox="0 0 48 48">
@@ -65,14 +88,15 @@
   </symbol>
 
   <symbol id="icon-reiki" viewBox="0 0 48 48">
-    <path d="M24 43c-7-7-7-14 0-20 7 6 7 13 0 20ZM24 43c-11 0-17-5-18-14 9-2 15 2 18 14ZM24 43c11 0 17-5 18-14-9-2-15 2-18 14Z"/>
+    <path
+      d="M24 43c-7-7-7-14 0-20 7 6 7 13 0 20ZM24 43c-11 0-17-5-18-14 9-2 15 2 18 14ZM24 43c11 0 17-5 18-14-9-2-15 2-18 14Z"/>
     <path d="M24 29c-6-4-8-10-4-17 7 2 10 8 4 17ZM24 29c6-4 8-10 4-17-7 2-10 8-4 17Z"/>
   </symbol>
 
   <symbol id="icon-transport" viewBox="0 0 48 48">
-    <path d="M5 15h26l8 9h4v13H5V15Z"/>
-    <path d="M31 16v9h8M10 15l3-6h13l3 6"/>
     <circle cx="14" cy="37" r="4"/>
     <circle cx="36" cy="37" r="4"/>
+    <path d="M5 14h24c3 0 5 2 7 5l4 7h3v11h-3M32 37H18M10 37H5V14Z"/>
+    <path d="M29 14v23M9 18h15v8H9ZM29 18h4l5 8h-9"/>
   </symbol>
 </svg>

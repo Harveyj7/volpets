@@ -28,7 +28,7 @@ body.page {
     position: absolute;
   }
   .hero__image {
-    animation: hero-cycle 9s ease-in-out infinite;
+    animation: hero-cycle 16s ease-in-out infinite;
     height: 100%;
     max-width: none;
     object-fit: cover;
@@ -41,16 +41,16 @@ body.page {
       object-position: center 48%;
     }
     &.image--two {
-      animation-delay: -6s;
+      animation-delay: -12s;
       object-position: center 40%;
       transform: scaleX(-1);
     }
     &.image--three {
-      animation-delay: -3s;
+      animation-delay: -8s;
       object-position: center 52%;
     }
     &.image--four {
-      animation-delay: -9s;
+      animation-delay: -4s;
       object-position: center 85%;
       transform: scaleX(-1);
     }
@@ -67,6 +67,9 @@ body.page {
   }
   .hero__copy {
     max-width: 490px;
+  }
+  .hero__media {
+    display: contents;
   }
   .hero__eyebrow {
     color: var(--accent);
@@ -229,8 +232,8 @@ body.page {
   20% {
     opacity: 1;
   }
-  33.333%,
-  86.667% {
+  25%,
+  95% {
     opacity: 0;
   }
   100% {
@@ -274,9 +277,28 @@ body.page {
 
 @media (max-width: 560px) {
   .hero {
-    align-items: flex-end;
-    min-height: 76svh;
+    align-items: stretch;
+    min-height: 0;
+    overflow: visible;
+    .hero__media {
+      aspect-ratio: 4 / 3;
+      border: 1px solid rgb(212 175 55 / 28%);
+      display: block;
+      isolation: isolate;
+      margin: 0 -20px 26px;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        background: linear-gradient(0deg, rgb(1 20 34 / 25%), transparent 45%);
+        content: "";
+        inset: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: -1;
+      }
+    }
     .hero__image {
+      z-index: -2;
       object-position: 64% center;
       &.image--two {
         object-position: 32% center;
@@ -289,14 +311,20 @@ body.page {
       }
     }
     .hero__shade {
-      background: linear-gradient(0deg, rgb(1 20 34 / 98%) 0%, rgb(1 20 34 / 80%) 42%, rgb(1 20 34 / 12%) 76%),
-      linear-gradient(90deg, rgb(1 20 34 / 50%), transparent 75%);
+      display: none;
     }
     .hero__inner {
-      padding: 112px 20px 32px;
+      padding: 108px 20px 38px;
+    }
+    .hero__copy {
+      max-width: none;
+    }
+    .hero__eyebrow {
+      margin-bottom: 16px;
     }
     h1 {
-      font-size: clamp(41px, 12vw, 55px);
+      font-size: clamp(39px, 11.5vw, 52px);
+      margin-bottom: 20px;
     }
     .hero__actions {
       width: 100%;
