@@ -56,6 +56,7 @@ main {
       grid-template-columns: 40px minmax(0, 1fr);
       padding-top: 20px;
       h3 {
+        font-family: var(--sans);
         font-size: var(--text-label);
         font-weight: var(--weight-bold);
         letter-spacing: 0.08em;
@@ -68,6 +69,7 @@ main {
       }
       a {
         color: var(--accent);
+        font-family: var(--sans);
         font-size: 0.68rem;
         font-weight: var(--weight-bold);
         letter-spacing: 0.12em;
@@ -129,6 +131,7 @@ main {
         margin-bottom: 22px;
       }
       h3 {
+        font-family: var(--sans);
         font-size: var(--text-label);
         font-weight: var(--weight-bold);
         letter-spacing: 0.1em;

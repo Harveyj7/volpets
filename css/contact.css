@@ -46,6 +46,7 @@
   border-radius: 2px;
   color: var(--ink);
   display: inline-flex;
+  font-family: var(--sans);
   font-size: .72rem;
   font-weight: 800;
   justify-content: center;
@@ -95,6 +96,7 @@
 .contact-form label,
 .contact-form legend {
   color: var(--text);
+  font-family: var(--sans);
   font-size: .68rem;
   font-weight: 700;
   letter-spacing: .14em;
@@ -302,6 +304,7 @@
 .enquiry-steps strong {
   color: var(--accent);
   display: block;
+  font-family: var(--sans);
   font-size: .78rem;
   letter-spacing: .16em;
   line-height: 1.45;
@@ -329,6 +332,7 @@
   border: 1px solid var(--accent);
   color: var(--accent);
   display: inline-block;
+  font-family: var(--sans);
   font-size: .7rem;
   font-weight: 700;
   letter-spacing: .16em;

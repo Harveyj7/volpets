@@ -31,6 +31,9 @@
         --show-item-border: 1px solid var(--surface-border) !important;
         --review-rating-star-color: var(--accent) !important;
         --star-color: var(--accent) !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        outline: 0 !important;
       }
 
       .sk-review-card {

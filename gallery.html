@@ -9,6 +9,7 @@
   <link href="css/gallery.css" rel="stylesheet">
   <link href="components/navbar.css" rel="stylesheet">
   <script defer src="js/main.js"></script>
+  <script defer src="js/gallery.js"></script>
 </head>
 <body>
 <main>
@@ -19,8 +20,9 @@
     <div class="container">
       <div class="gallery-intro" data-navbar-transition>
         <p class="header-tag">Inside Volpets</p>
-        <h1 id="service-title">Real Dogs. <span class="gold-header">Real days.</span></h1>
-        <p class="subtitle">A glimpse of the walks, training and relationships that make the club what it is.</p>
+        <h1 id="service-title">London dogs. <span class="gold-header">Life with volpets.</span></h1>
+        <p class="subtitle">A glimpse of dog walking, training and everyday care with volpets. Meet the dogs and people
+          behind out private dog club in London</p>
       </div>
 
       <div class="gallery-grid">
@@ -37,7 +39,8 @@
           <img alt="Dogs exploring together outdoors" decoding="async" loading="lazy" src="assets/IMG_0291.JPG">
         </div>
         <div class="image-container gallery-wide">
-          <img alt="A VolPets pack enjoying open space" decoding="async" loading="lazy" src="assets/IMG_0307.JPG">
+          <img alt="A VolPets pack enjoying open space" decoding="async" loading="lazy"
+               src="assets/gallery_house_scenery.jpeg">
         </div>
         <div class="image-container gallery-tall">
           <img alt="A dog enjoying an attentive VolPets outing" decoding="async" loading="lazy"
@@ -150,6 +153,37 @@
         <!--          <img alt="VolPets logo" decoding="async" loading="lazy" src="">-->
         <!--        </div>-->
       </div>
+
+      <dialog aria-label="Gallery photo viewer" class="gallery-lightbox" id="gallery-lightbox">
+        <div class="gallery-lightbox__frame">
+          <button aria-label="Close photo viewer" class="gallery-lightbox__close" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M6 6l12 12M18 6 6 18"/>
+            </svg>
+          </button>
+
+          <button aria-label="Previous photo" class="gallery-lightbox__arrow gallery-lightbox__arrow--previous"
+                  type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="m15 5-7 7 7 7"/>
+            </svg>
+          </button>
+
+          <figure class="gallery-lightbox__figure">
+            <img alt="" class="gallery-lightbox__image">
+            <figcaption aria-live="polite" class="gallery-lightbox__caption">
+              <span class="gallery-lightbox__count"></span>
+            </figcaption>
+          </figure>
+
+          <button aria-label="Next photo" class="gallery-lightbox__arrow gallery-lightbox__arrow--next"
+                  type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="m9 5 7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </dialog>
     </div>
   </section>
 
@@ -161,7 +195,8 @@
         <div class="member-cta__copy">
           <div class="header-tag">Become a member</div>
           <h2 class="member-cta__title" id="gallery-membership-title">For dogs who are<br>part of the family.</h2>
-          <p>Speak to our team to learn more or check membership availability in your area.</p>
+          <p>Looking for personal dog care in West & Central London? Share your postcode and tell us about your dog to
+            check membership availability.</p>
         </div>
         <a class="member-cta__button" href="contact.html">Apply to join</a>
       </div>
@@ -171,8 +206,8 @@
   <footer>
     <ul>
       <li>Private dog club</li>
-      <li>London</li>
-      <li>Membership enquiries Via contact page</li>
+      <li>West & central London</li>
+      <li>Membership enquiries contact our team</li>
     </ul>
   </footer>
 </main>

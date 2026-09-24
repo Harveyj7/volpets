@@ -1,16 +1,15 @@
 .sk-ww-google-reviews {
   background: transparent;
+  border: 0;
+  box-shadow: none;
   color-scheme: dark;
+  outline: 0;
   scroll-margin-top: 7rem;
   /*overflow-y: auto;*/
   /*overscroll-behavior: contain;*/
   /*scrollbar-color: var(--accent) var(--page-bg);*/
   /*scrollbar-gutter: stable;*/
   /*scrollbar-width: thin;*/
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
-  }
 }
 
 .reviews-page-section {
@@ -52,6 +51,7 @@
   }
   h3 {
     color: var(--muted);
+    font-family: var(--sans);
     font-size: clamp(11px, 1vw, 14px);
     letter-spacing: 0.06em;
     line-height: 1.55;
