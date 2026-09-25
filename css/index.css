@@ -62,8 +62,8 @@ body.page {
   }
   .hero__inner {
     margin: 0 auto;
-    padding: clamp(105px, 14vh, 140px) clamp(28px, 3.8vw, 48px) clamp(44px, 7vh, 66px);
-    width: min(100%, 1300px);
+    padding: clamp(115px, calc(14vh + 10px), 150px) clamp(1rem, 4vw, 2.5rem) clamp(34px, calc(7vh - 10px), 56px);
+    width: min(100%, 1380px);
   }
   .hero__copy {
     max-width: 490px;
@@ -189,30 +189,40 @@ body.page {
 
 .availability {
   align-items: center;
-  background: #031827;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: center;
-  min-height: 114px;
-  padding: 14px 24px;
-  text-align: center;
+  flex-direction: row;
+  gap: clamp(18px, 3vw, 44px);
+  justify-content: space-between;
+  padding: 14px clamp(1rem, 4vw, 2.5rem);
   h2 {
+    flex: 1 1 auto;
     font-size: clamp(27px, 3vw, 39px);
     letter-spacing: -0.025em;
     line-height: 1;
+    text-align: center;
   }
   .button {
+    flex: 0 0 auto;
     min-height: 37px;
     min-width: 242px;
     padding-block: 7px;
   }
 }
 
+@media (min-width: 901px) {
+  .availability::before {
+    content: "";
+    flex: 0 0 242px;
+  }
+}
+
 @media (min-width: 901px) and (min-height: 640px) {
+  body.page {
+    overflow: hidden;
+  }
   body.page main {
     display: grid;
-    grid-template-rows: minmax(0, 1fr) 78px 114px;
+    grid-template-rows: minmax(0, 1fr) 78px 96px 34px;
     height: 100vh;
     height: 100svh;
   }
@@ -221,7 +231,8 @@ body.page {
   }
   .benefits,
   .benefits__list,
-  .availability {
+  .availability,
+  .site-credit {
     height: 100%;
     min-height: 0;
   }
@@ -285,7 +296,7 @@ body.page {
       border: 1px solid rgb(212 175 55 / 28%);
       display: block;
       isolation: isolate;
-      margin: 0 -20px 26px;
+      margin: 0 calc(clamp(1rem, 4vw, 2.5rem) * -1) 26px;
       overflow: hidden;
       position: relative;
       &::after {
@@ -298,8 +309,8 @@ body.page {
       }
     }
     .hero__image {
-      z-index: -2;
       object-position: 64% center;
+      z-index: -2;
       &.image--two {
         object-position: 32% center;
       }
@@ -314,7 +325,7 @@ body.page {
       display: none;
     }
     .hero__inner {
-      padding: 108px 20px 38px;
+      padding: 118px clamp(1rem, 4vw, 2.5rem) 38px;
     }
     .hero__copy {
       max-width: none;
@@ -348,7 +359,10 @@ body.page {
     }
   }
   .availability {
+    flex-direction: column;
+    justify-content: center;
     min-height: 160px;
+    text-align: center;
     .button {
       min-width: 0;
       width: min(100%, 280px);
